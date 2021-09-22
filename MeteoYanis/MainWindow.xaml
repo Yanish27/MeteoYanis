@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeteoYanis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="302" Background="Black">
     <Grid>
-        <Label Content="bonjour" HorizontalAlignment="Left" Margin="137,188,0,0" VerticalAlignment="Top"/>
-
+        <ComboBox x:Name="ComboVille" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="258">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label x:Name="LabelTest" Content="bonjour" HorizontalAlignment="Left" Margin="91,112,0,0" VerticalAlignment="Top" Background="White"/>
     </Grid>
 </Window>
