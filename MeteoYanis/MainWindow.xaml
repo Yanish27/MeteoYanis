@@ -1,13 +1,17 @@
-﻿<Window x:Class="MeteoYanis.MainWindow"
+﻿<Window x:Name="MeteoYanis_" x:Class="MeteoYanis.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MeteoYanis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="302" Background="Black">
+        Title="Météo Yanis" Height="374" Width="324" Background="Black" ResizeMode="NoResize" Icon="/unnamed.png" AutomationProperties.Name="Météo Yanis">
     <Grid>
-        <ComboBox x:Name="ComboVille" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="258">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="ComboVille" HorizontalAlignment="Left" Margin="26,21,0,0" VerticalAlignment="Top" Width="258" SelectionChanged="ComboBox_SelectionChanged" Height="22">
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1">
                     <GradientStop Color="#FFF0F0F0"/>
@@ -15,6 +19,20 @@
                 </LinearGradientBrush>
             </ComboBox.Background>
         </ComboBox>
-        <Label x:Name="LabelTest" Content="bonjour" HorizontalAlignment="Left" Margin="91,112,0,0" VerticalAlignment="Top" Background="White"/>
+
+        <Label x:Name="TxtTemp" Content="Température :" HorizontalAlignment="Left" Margin="26,48,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelTemp" Content="99°" HorizontalAlignment="Left" Margin="119,48,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+        <Label x:Name="TxtHumidite" Content="Humidité :" HorizontalAlignment="Left" Margin="26,79,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelHum" Content="99%" HorizontalAlignment="Left" Margin="119,79,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+        <Label x:Name="TxtRessenti" Content="Ressenti :" HorizontalAlignment="Left" Margin="26,110,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelTempRESSENTI" Content="10 °" HorizontalAlignment="Left" Margin="119,110,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+        <Label x:Name="TxtLeveSoleil" Content="Levé soleil :" HorizontalAlignment="Left" Margin="26,141,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelLeveSoleil" Content="10h20" HorizontalAlignment="Left" Margin="119,141,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+        <Label x:Name="TxtCoucheSoleil" Content="Couché soleil :" HorizontalAlignment="Left" Margin="26,172,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelCoucheSoleil" Content="10h20" HorizontalAlignment="Left" Margin="119,172,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+        <Image x:Name="ImgLabel" HorizontalAlignment="Left" Height="96" Margin="107,234,0,0" VerticalAlignment="Top" Width="96" Source="/unnamed.png"/>
+        <Label x:Name="TxtVitesseVent" Content="Vent :" HorizontalAlignment="Left" Margin="26,203,0,0" VerticalAlignment="Top" Background="White" Width="88" Height="26"/>
+        <Label x:Name="LabelVent" Content="99 km/h" HorizontalAlignment="Left" Margin="119,203,0,0" VerticalAlignment="Top" Background="White" Width="165" Height="26"/>
+
     </Grid>
 </Window>
